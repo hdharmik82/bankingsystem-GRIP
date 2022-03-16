@@ -26,15 +26,15 @@
 
     $row1 = mysqli_fetch_array($result1);
     $debit = $row1['balance'];
-    echo $debit;
+   // echo $debit;
     // print_r($bal);
 
     $new_bal=$bal+$credit;
-    echo $new_bal;
+   // echo $new_bal;
 
     $debit_bal=$debit-$credit;
-    echo "<br>";
-    echo $debit_bal;
+    //echo "<br>";
+    //echo $debit_bal;
 
     // print_r($_POST);
 
@@ -43,7 +43,11 @@
         $sql3 = "UPDATE customer SET balance = $debit_bal WHERE username='sam69@sparks.bank'";
         $mysqli->query($sql2);
         $mysqli->query($sql3);
-        echo "<br> Transaction Successful......";
+        echo '<script type="text/javascript">'; 
+        echo 'alert("Transaction is Successful");'; 
+        echo 'window.location.href = "index.html";';
+        echo '</script>';
+        
     }
     else{
         echo "error..................";
