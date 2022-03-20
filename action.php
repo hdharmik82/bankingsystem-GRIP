@@ -26,18 +26,11 @@
 
     $row1 = mysqli_fetch_array($result1);
     $debit = $row1['balance'];
-   // echo $debit;
-    // print_r($bal);
 
     $new_bal=$bal+$credit;
-   // echo $new_bal;
 
     $debit_bal=$debit-$credit;
-    //echo "<br>";
-    //echo $debit_bal;
-
-    // print_r($_POST);
-
+   
     if(isset($_POST['username'], $_POST['amount'])){
         $sql2 = "UPDATE customer SET balance = $new_bal WHERE username='".$user."'";
         $sql3 = "UPDATE customer SET balance = $debit_bal WHERE username='sam69@sparks.bank'";
