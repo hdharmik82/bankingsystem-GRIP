@@ -131,14 +131,6 @@ $mysqli->close();
         </form>
         </div>
     
-
-
-
-
-
-
-
-
      <!-- Footer Starts Here -->
      <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-1 border-top">
             <div class="col-md-4 d-flex align-items-center">
